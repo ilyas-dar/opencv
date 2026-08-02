@@ -33,3 +33,4 @@ Learn Computer Vision fundamentals using OpenCV for AI/ML projects and future op
 ## Current Position
 
 Working on Gaussian Blur.
+revising the color channels.
