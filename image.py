@@ -9,11 +9,7 @@ gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
 
 ret, thresh=cv2.threshold(gray, 127,225,cv2.THRESH_BINARY)
-bret, thresht=cv2.threshold(img, 127,225,cv2.THRESH_BINARY)
-print(ret)
-print(bret)
-cv2.imshow("Threshold", thresh)
-cv2.imshow("Thresholdd", thresht)
+
 # blr = cv2.GaussianBlur(img, (5,5),0)
 
 # cv2.imshow("Original", img)
@@ -44,7 +40,14 @@ cv2.imshow("Thresholdd", thresht)
 # print(green[0,0])
 # print(red[0,0]) .
 
+counters, hierarchy = cv2.findContours(thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)  
 
-
+cv2.drawContours(img, counters, -1, (0, 255, 0), 0)
+print("Number of contours found = " , len(counters))
+print(type(counters))
+print(counters[0])
+print(type(counters[0]))
+print(counters[2].shape)
+# cv2.imshow("Contours", img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()

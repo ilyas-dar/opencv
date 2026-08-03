@@ -29,15 +29,24 @@ Learn Computer Vision fundamentals using OpenCV for AI/ML projects and future op
   * Kernel size (e.g. `(5,5)`)
   * Noise reduction and smoothing
   * Basic understanding of `sigmaX`
-  * Working on Gaussian Blur.
-  * Edge detection using `Candy`
+* Edge Detection (Canny):
 
+  * Lower and upper thresholds
+  * Effect of threshold values
+  * Comparison of color vs grayscale edge detection
+* Thresholding:
+
+  * Binary thresholding
+  * Threshold value and max value
+  * Understanding `ret`
+  * `THRESH_BINARY` vs `THRESH_BINARY_INV`
+* Contours:
+
+  * Detecting contours using `cv2.findContours()`
+  * Understanding `contours` as a collection of boundaries
+  * Each contour is a NumPy array of boundary points
+  * Basic contour structure and indexing
 
 ## Current Position
-  Thresholding.
 
-
-
-
-
-
+* Contours (understanding contour properties and applications).
