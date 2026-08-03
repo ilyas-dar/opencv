@@ -29,8 +29,15 @@ Learn Computer Vision fundamentals using OpenCV for AI/ML projects and future op
   * Kernel size (e.g. `(5,5)`)
   * Noise reduction and smoothing
   * Basic understanding of `sigmaX`
+  * Working on Gaussian Blur.
+  * Edge detection using `Candy`
+
 
 ## Current Position
+  Thresholding.
 
-Working on Gaussian Blur.
-revising the color channels.
+
+
+
+
+
