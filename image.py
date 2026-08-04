@@ -8,7 +8,10 @@ img = cv2.imread("resized_khm.jpg")
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
 
-ret, thresh=cv2.threshold(gray, 127,225,cv2.THRESH_BINARY)
+ret1, thresh1=cv2.threshold(gray, 127,225,cv2.THRESH_BINARY_INV)
+# ret2, thresh2=cv2.threshold(gray, 127,225,cv2.THRESH_BINARY)
+cv2.imshow("Thresholded", thresh1)
+# cv2.imshow("Thresholded", thresh2)
 
 # blr = cv2.GaussianBlur(img, (5,5),0)
 
@@ -40,14 +43,14 @@ ret, thresh=cv2.threshold(gray, 127,225,cv2.THRESH_BINARY)
 # print(green[0,0])
 # print(red[0,0]) .
 
-counters, hierarchy = cv2.findContours(thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)  
+# counters, hierarchy = cv2.findContours(thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)  
 
-cv2.drawContours(img, counters, -1, (0, 255, 0), 0)
-print("Number of contours found = " , len(counters))
-print(type(counters))
-print(counters[0])
-print(type(counters[0]))
-print(counters[2].shape)
+# cv2.drawContours(img, counters, -1, (0, 255, 0), 0)
+# print("Number of contours found = " , len(counters))
+# print(type(counters))
+# print(counters[0])
+# print(type(counters[0]))
+# print(counters[2].shape)
 # cv2.imshow("Contours", img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
